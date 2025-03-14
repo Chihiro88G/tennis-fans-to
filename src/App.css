@@ -1,6 +1,8 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #f5f3f3;
+  color: #454545;
 }
 
 .hamburger-menu {
@@ -38,6 +40,10 @@ body {
 
 h1 {
   font-size: 95px;
+}
+
+h2 {
+  font-size: 50px;
 }
 
 li {
@@ -89,9 +95,58 @@ nav {
   font-size: 20px;
 }
 
+.courts-list-section {
+
+}
+
+.courts-list-section h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.courts-list-table-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.courts-list-table {
+  width: 85%;
+  margin: 20px 0;
+  border: 1px solid rgb(206, 205, 205);
+  border-collapse: collapse;
+}
+
+.courts-list-table th {
+  background-color: #45547E;
+  color: white;
+}
+
+.courts-list-table tr {
+  height: 55px;
+}
+
+.courts-list-table td {
+  padding-left: 2%;
+}
+
+.courts-list-table tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.courts-list-table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+
 @media (max-width: 1015px) {
   h1 {
     font-size: 80px;
+  }
+
+  h2 {
+    font-size: 35px;
   }
 
   .top-img-section h1 {
@@ -106,6 +161,10 @@ nav {
 @media (max-width: 768px) {
   h1 {
     font-size: 40px;
+  }
+
+  h2 {
+    font-size: 25px;
   }
 
   .top-img-section h1 {
@@ -142,4 +201,47 @@ nav {
     display: block;
     margin: 20px 25px;
   }
+
+  .courts-list-table table, 
+  .courts-list-table th, 
+  .courts-list-table tr, 
+  .courts-list-table td {
+    display: block;
+  }
+
+  .courts-list-table thead tr {
+    position: absolute;
+    display: none;
+		/* top: -9999px;
+		left: -9999px; */
+  }
+
+  .courts-list-table tr {
+    height: unset;
+  }
+
+  .courts-list-table td {
+    border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+		white-space: normal;
+		text-align:left;
+    padding: 15px 0 15px 50%;
+  }
+
+  .courts-list-table td:before {
+    position: absolute;
+		top: 15px;
+		left: 15px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		text-align:left;
+		font-weight: bold;
+
+    content: attr(data-title);
+  }
+
+
 }

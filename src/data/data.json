@@ -1,0 +1,29 @@
+[
+  {
+    "location": "Agincourt Park",
+    "area": 2,
+    "public_hrs": null,
+    "winter_play": false,
+    "type": 1,
+    "lights": true,
+    "courts": 4
+  },
+  {
+    "location": "Alamosa Park",
+    "area": 3,
+    "public_hrs": [{
+      "day": 0,
+      "hrs_from": 3,
+      "hrs_to": 5
+    },
+    {
+      "day": 2,
+      "hrs_from": 9,
+      "hrs_to": 12
+    }],
+    "winter_play": false,
+    "type": 1,
+    "lights": false,
+    "courts": 3
+  }
+]

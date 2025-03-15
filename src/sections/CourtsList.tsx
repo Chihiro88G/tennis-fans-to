@@ -1,5 +1,7 @@
 import React from 'react';
 import '../App.css';
+import data from '../data/data.json';
+import Court from '../components/Court';
 
 function CourtsList() {
   return (
@@ -12,29 +14,20 @@ function CourtsList() {
             <tr>
               <th>Location</th>
               <th>Area</th>
+              <th>Type</th>
               <th>Club Public Hrs</th>
               <th>Courts</th>
               <th>Lights</th>
               <th>Winter Play</th>
             </tr>
           </thead>
-          <tr>
-            <td data-title="Location">Scarborough Blufs</td>
-            <td data-title="Area">Scarborough</td>
-            <td data-title="Club Public Hrs">sth</td>
-            <td data-title="Courts">5</td>
-            <td data-title="Lights">Yes</td>
-            <td data-title="Winter Pay">No</td>
-          </tr>
-          <tr>
-            <td data-title="Location">Ramsden Park</td>
-            <td data-title="Area">Downtown</td>
-            <td data-title="Club Public Hrs">sth</td>
-            <td data-title="Courts">12</td>
-            <td data-title="Lights">No</td>
-            <td data-title="Winter Pay">No</td>
-          </tr>
+          <tbody>
+            {data.map(courtData => <Court {...courtData} key={courtData.location}/>)}
+          </tbody>
         </table>
+      </div>
+      <div className='reference-div'>
+        <p>Reference: <a href='https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/tennis-court-listings/'>City of Toronto - Tennis Court Listings</a></p>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import React from 'react';
 import '../App.css';
+import { formatTime } from '../utils/formatTime';
 
 interface CourtProps {
   location: string;
@@ -40,7 +41,7 @@ function Court(props: CourtProps) {
         case 6: day = 'Saturdays'; break;
         default: day = 'Holidays';
       }
-      publicHours.push(`${day}: ${publicHr.hrs_from} - ${publicHr.hrs_to}`);
+      publicHours.push(`${day}: ${formatTime(publicHr.hrs_from)} - ${formatTime(publicHr.hrs_to)}`);
     }
   }
 

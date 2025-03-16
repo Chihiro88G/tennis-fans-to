@@ -2,7 +2,26 @@
   {
     "location": "Agincourt Park",
     "area": 2,
-    "public_hrs": null,
+    "public_hrs": [{
+      "day": 0,
+      "hrs_from": 14,
+      "hrs_to": 16
+    },
+    {
+      "day": 2,
+      "hrs_from": 16,
+      "hrs_to": 18
+    },
+    {
+      "day": 4,
+      "hrs_from": 16,
+      "hrs_to": 18
+    },
+    {
+      "day": 7,
+      "hrs_from": 14,
+      "hrs_to": 16
+    }],
     "winter_play": false,
     "type": 1,
     "lights": true,
@@ -11,19 +30,113 @@
   {
     "location": "Alamosa Park",
     "area": 3,
-    "public_hrs": [{
-      "day": 0,
-      "hrs_from": 3,
-      "hrs_to": 5
-    },
-    {
-      "day": 2,
-      "hrs_from": 9,
-      "hrs_to": 12
-    }],
+    "public_hrs": null,
     "winter_play": false,
     "type": 1,
     "lights": false,
     "courts": 3
+  },
+  {
+    "location": "Albion Gardens Park",
+    "area": 5,
+    "public_hrs": null,
+    "winter_play": false,
+    "type": 0,
+    "lights": true,
+    "courts": 3
+  },
+  {
+    "location": "Amesbury Park",
+    "area": 5,
+    "public_hrs": null,
+    "winter_play": true,
+    "type": 0,
+    "lights": false,
+    "courts": 2
+  },
+  {
+    "location": "Ancaster Park",
+    "area": 5,
+    "public_hrs": null,
+    "winter_play": false,
+    "type": 0,
+    "lights": false,
+    "courts": 3
+  },
+  {
+    "location": "Angela James Arena - Tennis Court Area",
+    "area": 3,
+    "public_hrs": null,
+    "winter_play": true,
+    "type": 0,
+    "lights": true,
+    "courts": 4
+  },
+  {
+    "location": "Antibes Community Centre",
+    "area": 3,
+    "public_hrs": null,
+    "winter_play": true,
+    "type": 0,
+    "lights": false,
+    "courts": 1
+  },
+  {
+    "location": "Balmoral Park",
+    "area": 3,
+    "public_hrs": null,
+    "winter_play": false,
+    "type": 0,
+    "lights": true,
+    "courts": 3
+  },
+  {
+    "location": "Banbury Park",
+    "area": 3,
+    "public_hrs": [{
+      "day": 0,
+      "hrs_from": 14,
+      "hrs_to": 17
+    },
+    {
+      "day": 6,
+      "hrs_from": 14,
+      "hrs_to": 17
+    }],
+    "winter_play": false,
+    "type": 1,
+    "lights": true,
+    "courts": 4
+  },
+  {
+    "location": "Baycrest Park",
+    "area": 3,
+    "public_hrs": null,
+    "winter_play": true,
+    "type": 0,
+    "lights": true,
+    "courts": 2
+  },
+  {
+    "location": "Bayview Village Park",
+    "area": 3,
+    "public_hrs": null,
+    "winter_play": true,
+    "type": 0,
+    "lights": false,
+    "courts": 3
+  },
+  {
+    "location": "Beaches Park",
+    "area": 1,
+    "public_hrs": [{
+      "day": 0,
+      "hrs_from": 16,
+      "hrs_to": 22
+    }],
+    "winter_play": false,
+    "type": 1,
+    "lights": true,
+    "courts": 10
   }
 ]

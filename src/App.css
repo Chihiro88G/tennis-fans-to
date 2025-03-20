@@ -189,6 +189,23 @@ nav li {
   border-color: #45547E;
 }
 
+.filters {
+  display: flex;
+  width: 85%;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.area-filter {
+  height: 35px;
+  margin: 0 20px;
+  width: 20%;
+  padding-left: 3%;
+  border-radius: 5px;
+  border-color: aliceblue;
+}
+
 @media (max-width: 1015px) {
   h1 {
     font-size: 80px;
@@ -292,5 +309,14 @@ nav li {
     content: attr(data-title);
   }
 
-
+  .filters {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    row-gap: 5px;
+  }
+  
+  .area-filter {
+    width: 90%;
+    margin: 0;
+  }
 }

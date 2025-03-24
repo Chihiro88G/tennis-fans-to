@@ -1,4 +1,3 @@
-// import { ProductFilters } from '@/api/products';
 import { ChangeEvent } from 'react';
 
 const AREAS: Record<number, string> = {
@@ -7,7 +6,8 @@ const AREAS: Record<number, string> = {
   2: 'Scarborough',
   3: 'North York',
   4: 'West',
-  5: 'Etobicoke'
+  5: 'Etobicoke',
+  6: 'Midtown'
 };
 
 function Filter({ onChange }: any) {

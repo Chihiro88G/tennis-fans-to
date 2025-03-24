@@ -24,7 +24,8 @@ function Court(props: CourtProps) {
     case 2: area = 'Scarborough'; break;
     case 3: area = 'North York'; break;
     case 4: area = 'West'; break;
-    default: area = 'Etobicoke'
+    case 5: area = 'Etobicoke'; break;
+    default: area = 'Midtown'
   }
 
   let publicHours: string[] = [];

@@ -661,5 +661,114 @@
     "type": 1,
     "lights": true,
     "courts": 3
+  },
+  {
+    "location": "Gihon Spring Park",
+    "area": 5,
+    "public_hrs": null,
+    "winter_play": true,
+    "type": 0,
+    "lights": true,
+    "courts": 2
+  },
+  {
+    "location": "Glen Park",
+    "area": 5,
+    "public_hrs": null,
+    "winter_play": false,
+    "type": 0,
+    "lights": true,
+    "courts": 2
+  },
+  {
+    "location": "Glendora Park",
+    "area": 3,
+    "public_hrs": null,
+    "winter_play": true,
+    "type": 0,
+    "lights": true,
+    "courts": 2
+  },
+  {
+    "location": "Goulding Park",
+    "area": 3,
+    "public_hrs": null,
+    "winter_play": false,
+    "type": 0,
+    "lights": false,
+    "courts": 3
+  },
+  {
+    "location": "Gracedale Park",
+    "area": 5,
+    "public_hrs": null,
+    "winter_play": true,
+    "type": 0,
+    "lights": false,
+    "courts": 3
+  },
+  {
+    "location": "Grandravine Park",
+    "area": 3,
+    "public_hrs": null,
+    "winter_play": false,
+    "type": 0,
+    "lights": false,
+    "courts": 3
+  },
+  {
+    "location": "Graydon Hall Park",
+    "area": 3,
+    "public_hrs": null,
+    "winter_play": false,
+    "type": 0,
+    "lights": true,
+    "courts": 3
+  },
+  {
+    "location": "Gwendolen Park",
+    "area": 3,
+    "public_hrs": [{
+      "day": 5,
+      "hrs_from": 17,
+      "hrs_to": 19
+    },
+    {
+      "day": 5,
+      "hrs_from": 20,
+      "hrs_to": 22
+    },
+    {
+      "day": 0,
+      "hrs_from": 21,
+      "hrs_to": 23
+    },
+    {
+      "day": 7,
+      "hrs_from": 21,
+      "hrs_to": 23
+    }],
+    "winter_play": false,
+    "type": 1,
+    "lights": true,
+    "courts": 3
+  },
+  {
+    "location": "Havenbrook Park",
+    "area": 3,
+    "public_hrs": [{
+      "day": 0,
+      "hrs_from": 13,
+      "hrs_to": 16
+    },
+    {
+      "day": 6,
+      "hrs_from": 13,
+      "hrs_to": 16
+    }],
+    "winter_play": false,
+    "type": 1,
+    "lights": true,
+    "courts": 4
   }
 ]

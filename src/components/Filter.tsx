@@ -1,16 +1,12 @@
 import { ChangeEvent } from 'react';
 
-const AREAS: Record<number, string> = {
-  0: 'Downtown',
-  1: 'East York',
-  2: 'Scarborough',
-  3: 'North York',
-  4: 'West',
-  5: 'Etobicoke',
-  6: 'Midtown'
-};
+interface FilterProps {
+  data: Record<number, string>;
+  type: 'Area' | 'Type' | 'Lights' | 'Courts';
+  onChange: (value: number | null) => void;
+}
 
-function Filter({ onChange }: any) {
+function Filter({ data, type, onChange }: FilterProps) {
   const handleSelect = (e: ChangeEvent<HTMLSelectElement>) => {
     const selectedValue = e.target.value;
     if (selectedValue === 'all') {
@@ -22,8 +18,8 @@ function Filter({ onChange }: any) {
 
   return (
     <select className='area-filter' onChange={handleSelect}>
-      <option value='all'>Area</option>
-      {Object.entries(AREAS).map(([key, value]) => (
+      <option value='all'>{type}</option>
+      {Object.entries(data).map(([key, value]) => (
         <option value={key} key={key}>
           {value}
         </option>

@@ -4,15 +4,41 @@ import data from '../data/data.json';
 import Court from '../components/Court';
 import Pagenation from '../components/Pagenation';
 import Filter from '../components/Filter';
+import { AREAS, LIGHTS, TYPE, COURTS } from '../utils/filterItems';
 
 function CourtsList() {
   const [currentPage, setCurrentPage] = useState(1);
   const [courtsPerPage] = useState(10);
   const [selectedArea, setSelectedArea] = useState<number | null>(null);
+  const [selectedType, setSelectedType] = useState<number | null>(null);
+  const [selectedLights, setSelectedLights] = useState<number | null>(null);
+  const [selectedCourts, setSelectedCourts] = useState<number | null>(null);
 
-  const filteredData = selectedArea === null 
-  ? data 
-  : data.filter((d: any) => d.area === selectedArea);
+  const filteredData = data.filter((court) => {
+    let isValid = true;
+
+    if (selectedArea !== null && court.area !== selectedArea) {
+      isValid = false;
+    }
+
+    if (selectedType !== null && court.type !== selectedType) {
+      isValid = false;
+    }
+
+    if (selectedLights !== null && court.lights !== (selectedLights === 0)) {
+      isValid = false;
+    }
+
+    if (selectedCourts !== null) {
+      if (selectedCourts === 0 && court.courts > 5) {
+        isValid = false;
+      } else if (selectedCourts === 1 && court.courts < 6) {
+        isValid = false;
+      }
+    }
+
+    return isValid;
+  });
 
   const indexOfLastCourt = currentPage * courtsPerPage;
   const indexOfFirstCourt = indexOfLastCourt - courtsPerPage;
@@ -22,10 +48,10 @@ function CourtsList() {
     <div className='courts-list-section'>
       <h2>Tennis Court Listings in Toronto Area</h2>
       <div className='filters'>
-        <Filter onChange={setSelectedArea} />
-        <Filter onChange={setSelectedArea} />
-        <Filter onChange={setSelectedArea} />
-        <Filter onChange={setSelectedArea} />
+        <Filter data={AREAS} type='Area' onChange={setSelectedArea} />
+        <Filter data={TYPE} type='Type' onChange={setSelectedType} />
+        <Filter data={LIGHTS} type='Lights' onChange={setSelectedLights} />
+        <Filter data={COURTS} type='Courts' onChange={setSelectedCourts} />
       </div>
       <div className='courts-list-table-div'>
         <table className='courts-list-table'>

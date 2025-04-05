@@ -770,5 +770,260 @@
     "type": 1,
     "lights": true,
     "courts": 4
+  },
+  {
+    "location": "Hawksbury Park",
+    "area": 3,
+    "public_hrs": [{
+      "day": 6,
+      "hrs_from": 16,
+      "hrs_to": 19
+    },
+    {
+      "day": 0,
+      "hrs_from": 16,
+      "hrs_to": 19
+    }],
+    "winter_play": false,
+    "type": 1,
+    "lights": true,
+    "courts": 6
+  },
+  {
+    "location": "Hendon Park",
+    "area": 3,
+    "public_hrs": null,
+    "winter_play": false,
+    "type": 0,
+    "lights": true,
+    "courts": 4
+  },
+  {
+    "location": "Heron Park",
+    "area": 2,
+    "public_hrs": [{
+      "day": 6,
+      "hrs_from": 20,
+      "hrs_to": 23
+    },
+    {
+      "day": 0,
+      "hrs_from": 20,
+      "hrs_to": 23
+    },
+    {
+      "day": 7,
+      "hrs_from": 20,
+      "hrs_to": 23
+    }],
+    "winter_play": false,
+    "type": 1,
+    "lights": true,
+    "courts": 5
+  },
+  {
+    "location": "High Park",
+    "area": 4,
+    "public_hrs": [{
+      "day": 5,
+      "hrs_from": 21,
+      "hrs_to": 23
+    },
+    {
+      "day": 6,
+      "hrs_from": 21,
+      "hrs_to": 23
+    },
+    {
+      "day": 0,
+      "hrs_from": 21,
+      "hrs_to": 23
+    },
+    {
+      "day": 7,
+      "hrs_from": 21,
+      "hrs_to": 23
+    }],
+    "winter_play": true,
+    "type": 1,
+    "lights": true,
+    "courts": 7
+  },
+  {
+    "location": "Hillcrest Park",
+    "area": 6,
+    "public_hrs": [{
+      "day": 6,
+      "hrs_from": 19,
+      "hrs_to": 23
+    },
+    {
+      "day": 0,
+      "hrs_from": 18,
+      "hrs_to": 23
+    },
+    {
+      "day": 7,
+      "hrs_from": 18,
+      "hrs_to": 23
+    }],
+    "winter_play": true,
+    "type": 1,
+    "lights": true,
+    "courts": 4
+  },
+  {
+    "location": "Howard Talbot Park",
+    "area": 3,
+    "public_hrs": null,
+    "winter_play": false,
+    "type": 0,
+    "lights": false,
+    "courts": 2
+  },
+  {
+    "location": "Hullmar Park",
+    "area": 3,
+    "public_hrs": null,
+    "winter_play": true,
+    "type": 0,
+    "lights": true,
+    "courts": 3
+  },
+  {
+    "location": "Humber Valley Park",
+    "area": 5,
+    "public_hrs": null,
+    "winter_play": false,
+    "type": 0,
+    "lights": true,
+    "courts": 4
+  },
+  {
+    "location": "Indian Line Park",
+    "area": 5,
+    "public_hrs": null,
+    "winter_play": false,
+    "type": 0,
+    "lights": true,
+    "courts": 2
+  },
+  {
+    "location": "Iroquois Park",
+    "area": 2,
+    "public_hrs": [{
+      "day": 1,
+      "hrs_from": 16,
+      "hrs_to": 18
+    },
+    {
+      "day": 6,
+      "hrs_from": 17,
+      "hrs_to": 19
+    },
+    {
+      "day": 0,
+      "hrs_from": 17,
+      "hrs_to": 19
+    },
+    {
+      "day": 7,
+      "hrs_from": 16,
+      "hrs_to": 18
+    }],
+    "winter_play": true,
+    "type": 1,
+    "lights": false,
+    "courts": 3
+  },
+  {
+    "location": "Irving W. Chapley Park",
+    "area": 3,
+    "public_hrs": null,
+    "winter_play": true,
+    "type": 0,
+    "lights": true,
+    "courts": 2
+  },
+  {
+    "location": "Jeff Healey Park",
+    "area": 5,
+    "public_hrs": null,
+    "winter_play": true,
+    "type": 0,
+    "lights": true,
+    "courts": 2
+  },
+  {
+    "location": "Jimmie Simpson Park",
+    "area": 1,
+    "public_hrs": null,
+    "winter_play": true,
+    "type": 0,
+    "lights": false,
+    "courts": 2
+  },
+  {
+    "location": "Jonathan Ashbridge Park",
+    "area": 1,
+    "public_hrs": null,
+    "winter_play": true,
+    "type": 0,
+    "lights": false,
+    "courts": 2
+  },
+  {
+    "location": "June Rowlands Park",
+    "area": 6,
+    "public_hrs": [{
+      "day": 6,
+      "hrs_from": 21,
+      "hrs_to": 23
+    },
+    {
+      "day": 0,
+      "hrs_from": 18,
+      "hrs_to": 23
+    }],
+    "winter_play": false,
+    "type": 1,
+    "lights": true,
+    "courts": 6
+  },
+  {
+    "location": "Kingsview Park",
+    "area": 5,
+    "public_hrs": null,
+    "winter_play": false,
+    "type": 0,
+    "lights": false,
+    "courts": 2
+  },
+  {
+    "location": "Kirkwood Park",
+    "area": 3,
+    "public_hrs": null,
+    "winter_play": true,
+    "type": 0,
+    "lights": true,
+    "courts": 4
+  },
+  {
+    "location": "L'Amoreaux Tennis Centre",
+    "area": 2,
+    "public_hrs": null,
+    "winter_play": false,
+    "type": 0,
+    "lights": true,
+    "courts": 5
+  },
+  {
+    "location": "Laburnham Park",
+    "area": 5,
+    "public_hrs": null,
+    "winter_play": true,
+    "type": 0,
+    "lights": true,
+    "courts": 2
   }
 ]

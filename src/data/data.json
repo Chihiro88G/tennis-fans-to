@@ -1106,5 +1106,61 @@
     "type": 0,
     "lights": true,
     "courts": 2
+  },
+  {
+    "location": "Lytton Park",
+    "area": 6,
+    "public_hrs": null,
+    "winter_play": false,
+    "type": 1,
+    "lights": true,
+    "courts": 3
+  },
+  {
+    "location": "Major Abbas Ali Park",
+    "area": 2,
+    "public_hrs": [{
+      "day": 2,
+      "hrs_from": 16,
+      "hrs_to": 18
+    },
+    {
+      "day": 3,
+      "hrs_from": 16,
+      "hrs_to": 18
+    },
+    {
+      "day": 4,
+      "hrs_from": 16,
+      "hrs_to": 18
+    },
+    {
+      "day": 6,
+      "hrs_from": 16,
+      "hrs_to": 18
+    },
+    {
+      "day": 0,
+      "hrs_from": 16,
+      "hrs_to": 18
+    },
+    {
+      "day": 7,
+      "hrs_from": 16,
+      "hrs_to": 18
+    }],
+    "winter_play": false,
+    "type": 1,
+    "lights": true,
+    "courts": 3
+  },
+  {
+    "location": "Malvern Park",
+    "area": 2,
+    "public_hrs": null,
+    "winter_play": true,
+    "type": 0,
+    "lights": true,
+    "courts": 3
   }
 ]

@@ -54,8 +54,8 @@ function Court(props: CourtProps) {
       <td data-title="Club Public Hrs">
         {publicHours.length === 0 ? ' ' 
         : <ul>
-            {publicHours.map((ph: string, index: number) => 
-              <li key={index}>{ph}</li>
+            {publicHours.map((publicHour: string, index: number) => 
+              <li key={index}>{publicHour}</li>
             )}
           </ul>
         }

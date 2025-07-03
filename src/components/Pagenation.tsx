@@ -14,7 +14,7 @@ function Pagenation({ courtsPerPage, totalCourts, setCurrentPage, currentPage}: 
     pageNumbers.push(i);
   }
 
-  const paginate = ((pageNumber: number, e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+  const setCurrentPageNo = ((pageNumber: number, e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
     setCurrentPage(pageNumber);
   });
@@ -28,7 +28,7 @@ function Pagenation({ courtsPerPage, totalCourts, setCurrentPage, currentPage}: 
             className={`page-item ${currentPage === number ? "active" : ""}`}
           >
             <a
-              onClick={(e) => paginate(number, e)}
+              onClick={(e) => setCurrentPageNo(number, e)}
               href="!#"
               className="page-link"
             >

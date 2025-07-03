@@ -40,9 +40,9 @@ function CourtsList() {
     return isValid;
   });
 
-  const indexOfLastCourt = currentPage * courtsPerPage;
-  const indexOfFirstCourt = indexOfLastCourt - courtsPerPage;
-  const currentCourts = filteredData.slice(indexOfFirstCourt, indexOfLastCourt);
+  const lastCourtNum = currentPage * courtsPerPage;
+  const firstCourtNum = lastCourtNum - courtsPerPage;
+  const currentCourts = filteredData.slice(firstCourtNum, lastCourtNum);
 
   return (
     <div className='courts-list-section'>

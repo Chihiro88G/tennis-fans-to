@@ -1216,5 +1216,37 @@
     "type": 1,
     "lights": true,
     "courts": 4
+  },
+  {
+    "location": "Maryvale Park",
+    "area": 2,
+    "public_hrs": [{
+      "day": 0,
+      "hrs_from": 12,
+      "hrs_to": 15
+    },
+    {
+      "day": 6,
+      "hrs_from": 12,
+      "hrs_to": 15
+    },
+    {
+      "day": 7,
+      "hrs_from": 12,
+      "hrs_to": 15
+    }],
+    "winter_play": true,
+    "type": 1,
+    "lights": true,
+    "courts": 3
+  },
+  {
+    "location": "McDairmid Woods Park",
+    "area": 2,
+    "public_hrs": null,
+    "winter_play": true,
+    "type": 0,
+    "lights": true,
+    "courts": 3
   }
 ]

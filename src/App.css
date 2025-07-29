@@ -193,6 +193,10 @@ nav li {
   border-color: #45547E;
 }
 
+.arrows {
+  margin: 12px;
+}
+
 .filters {
   display: flex;
   width: 85%;

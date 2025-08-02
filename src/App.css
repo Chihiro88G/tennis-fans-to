@@ -197,6 +197,10 @@ nav li {
   margin: 12px;
 }
 
+.disabled-arrow {
+  color: #a4a4a4;
+}
+
 .filters {
   display: flex;
   width: 85%;

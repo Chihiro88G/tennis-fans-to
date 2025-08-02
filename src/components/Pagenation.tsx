@@ -31,24 +31,63 @@ function Pagenation({ courtsPerPage, totalCourts, setCurrentPage, currentPage}: 
     setCurrentPage(pageNumber);
   });
 
+  const leftBarArrow = currentPage > 1 ?
+    <a
+      onClick={(e) => setCurrentPageNo(1, e)}
+      href="!#"
+    >
+      <LeftBarArrow />
+    </a>
+    :
+    <span className='disabled-arrow'>
+      <LeftBarArrow />
+    </span>
+  ;
+
+  const rightBarArrow = currentPage !== totalPages ?
+    <a 
+      onClick={(e) => setCurrentPageNo(totalPages, e)}
+      href="!#"
+    >
+      <RightBarArrow />
+    </a>
+    :
+    <span className='disabled-arrow'>
+      <RightBarArrow />
+    </span>
+;
+
+  const leftArrow = currentPage > 1 ?
+    <a 
+      onClick={(e) => setCurrentPageNo(currentPage - 1, e)}
+      href="!#"
+    >
+      <LeftArrow />
+    </a>
+    :
+    <span className='disabled-arrow'>
+     <LeftArrow />
+    </span>
+  ;
+
+  const rightArrow = totalPages !== currentPage ?
+    <a 
+      onClick={(e) => setCurrentPageNo(currentPage + 1, e)}
+      href="!#"
+    >
+      <RightArrow />
+    </a>
+    :
+    <span className='disabled-arrow'>
+       <RightArrow />
+    </span>
+  ;
+
   return (
     <div>
       <ul className="pagination">
-        <a 
-          onClick={(e) => setCurrentPageNo(1, e)}
-          href="!#"
-        >
-          <LeftBarArrow />
-        </a>
-
-        {currentPage > 1 && 
-          <a 
-            onClick={(e) => setCurrentPageNo(currentPage - 1, e)}
-            href="!#"
-          >
-            <LeftArrow />
-          </a>
-        }
+        {leftBarArrow}
+        {leftArrow}
         
         {visiblePageNumbers.map((number) => (
           <li
@@ -65,22 +104,8 @@ function Pagenation({ courtsPerPage, totalCourts, setCurrentPage, currentPage}: 
           </li>
         ))}
 
-        {totalPages !== currentPage &&
-          <a 
-            onClick={(e) => setCurrentPageNo(currentPage + 1, e)}
-            href="!#"
-          >
-            <RightArrow />
-          </a>
-        }
-
-        <a 
-          onClick={(e) => setCurrentPageNo(totalPages, e)}
-          href="!#"
-        >
-          <RightBarArrow />
-        </a>
-
+        {rightArrow}
+        {rightBarArrow}
       </ul>
     </div>
   );

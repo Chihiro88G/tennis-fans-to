@@ -1,4 +1,5 @@
 import React, { Dispatch } from 'react';
+import { Link } from 'react-router-dom';
 import { LeftArrow, LeftBarArrow, RightArrow, RightBarArrow } from '../svgs';
 
 interface PagenationProps {
@@ -18,6 +19,9 @@ function Pagenation({ courtsPerPage, totalCourts, setCurrentPage, currentPage}: 
 
   const totalPages = pageNumbers.length;
 
+  const leftArrowsDisabled = currentPage === 1;
+  const rightArrowsDisabled = totalPages === currentPage;
+
   let start = Math.max(currentPage - Math.floor(maxPageNum / 2), 1);
   let end = start + maxPageNum - 1;
   if (end > totalPages) {
@@ -26,86 +30,56 @@ function Pagenation({ courtsPerPage, totalCourts, setCurrentPage, currentPage}: 
   }
   const visiblePageNumbers = pageNumbers.slice(start - 1, end);
 
-  const setCurrentPageNo = ((pageNumber: number, e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    e.preventDefault();
-    setCurrentPage(pageNumber);
-  });
-
-  const leftBarArrow = currentPage > 1 ?
-    <a
-      onClick={(e) => setCurrentPageNo(1, e)}
-      href="!#"
-    >
-      <LeftBarArrow />
-    </a>
-    :
-    <span className='disabled-arrow'>
-      <LeftBarArrow />
-    </span>
-  ;
-
-  const rightBarArrow = currentPage !== totalPages ?
-    <a 
-      onClick={(e) => setCurrentPageNo(totalPages, e)}
-      href="!#"
-    >
-      <RightBarArrow />
-    </a>
-    :
-    <span className='disabled-arrow'>
-      <RightBarArrow />
-    </span>
-;
-
-  const leftArrow = currentPage > 1 ?
-    <a 
-      onClick={(e) => setCurrentPageNo(currentPage - 1, e)}
-      href="!#"
-    >
-      <LeftArrow />
-    </a>
-    :
-    <span className='disabled-arrow'>
-     <LeftArrow />
-    </span>
-  ;
-
-  const rightArrow = totalPages !== currentPage ?
-    <a 
-      onClick={(e) => setCurrentPageNo(currentPage + 1, e)}
-      href="!#"
-    >
-      <RightArrow />
-    </a>
-    :
-    <span className='disabled-arrow'>
-       <RightArrow />
-    </span>
-  ;
-
   return (
     <div>
       <ul className="pagination">
-        {leftBarArrow}
-        {leftArrow}
+        <button
+          type="button"
+          className='arrow-btn'
+          onClick={() => setCurrentPage(1)}
+          disabled={leftArrowsDisabled}
+        >
+          <LeftBarArrow />
+        </button>
+        <button
+          type="button"
+          className='arrow-btn'
+          onClick={() => setCurrentPage(currentPage - 1)}
+          disabled={leftArrowsDisabled}
+        >
+          <LeftArrow />
+        </button>
         
         {visiblePageNumbers.map((number) => (
           <li
             key={number}
             className={`page-item ${currentPage === number ? "active" : ""}`}
           >
-            <a
-              onClick={(e) => setCurrentPageNo(number, e)}
-              href="!#"
-              className="page-link"
+            <button
+              type='button'
+              onClick={() => setCurrentPage(number)}
             >
               {number}
-            </a>
+            </button>
           </li>
         ))}
 
-        {rightArrow}
-        {rightBarArrow}
+        <button
+          type="button"
+          className='arrow-btn'
+          onClick={() => setCurrentPage(currentPage + 1)}
+          disabled={rightArrowsDisabled}
+        >
+          <RightArrow />
+        </button>
+        <button
+          type="button"
+          className='arrow-btn'
+          onClick={() => setCurrentPage(totalPages)}
+          disabled={rightArrowsDisabled}
+        >
+          <RightBarArrow />
+        </button>
       </ul>
     </div>
   );

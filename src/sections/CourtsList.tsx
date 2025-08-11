@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import '../App.css';
 import data from '../data/data.json';
 import Court from '../components/Court';
@@ -41,12 +41,15 @@ function CourtsList() {
     return isValid;
   });
 
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedArea, selectedType, selectedLights, selectedCourts])
+
   const lastCourtNum = currentPage * courtsPerPage;
   const firstCourtNum = lastCourtNum - courtsPerPage;
   const currentCourts = filteredData.slice(firstCourtNum, lastCourtNum);
 
   const handlePageChange = (page: number) => {
-    console.log(page)
     setCurrentPage(page);
     listStartRef.current?.scrollIntoView({ behavior: 'smooth' });
   }

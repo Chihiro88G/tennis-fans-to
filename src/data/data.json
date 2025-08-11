@@ -1182,15 +1182,6 @@
     "courts": 3
   },
   {
-    "location": "Maple Leaf Park",
-    "area": 4,
-    "public_hrs": null,
-    "winter_play": true,
-    "type": 0,
-    "lights": true,
-    "courts": 3
-  },
-  {
     "location": "Martingrove Gardens Park",
     "area": 5,
     "public_hrs": null,

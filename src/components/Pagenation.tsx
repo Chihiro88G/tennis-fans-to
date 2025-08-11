@@ -1,11 +1,10 @@
-import React, { Dispatch } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import { LeftArrow, LeftBarArrow, RightArrow, RightBarArrow } from '../svgs';
 
 interface PagenationProps {
   courtsPerPage: number,
   totalCourts: number,
-  setCurrentPage: Dispatch<React.SetStateAction<number>>,
+  setCurrentPage: (page: number) => void,
   currentPage: number,
 }
 

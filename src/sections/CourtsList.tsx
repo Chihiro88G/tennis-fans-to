@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import '../App.css';
 import data from '../data/data.json';
 import Court from '../components/Court';
@@ -8,6 +8,7 @@ import { AREAS, LIGHTS, TYPE, COURTS } from '../utils/filterItems';
 
 function CourtsList() {
   const [currentPage, setCurrentPage] = useState(1);
+  const listStartRef = useRef<HTMLDivElement>(null);
   const [courtsPerPage] = useState(10);
   const [selectedArea, setSelectedArea] = useState<number | null>(null);
   const [selectedType, setSelectedType] = useState<number | null>(null);
@@ -44,16 +45,22 @@ function CourtsList() {
   const firstCourtNum = lastCourtNum - courtsPerPage;
   const currentCourts = filteredData.slice(firstCourtNum, lastCourtNum);
 
+  const handlePageChange = (page: number) => {
+    console.log(page)
+    setCurrentPage(page);
+    listStartRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }
+
   return (
     <div className='courts-list-section'>
       <h2>Tennis Court Listings in Toronto Area</h2>
-      <div className='filters'>
+      <div className='filters' ref={listStartRef}>
         <Filter data={AREAS} type='Area' onChange={setSelectedArea} />
         <Filter data={TYPE} type='Type' onChange={setSelectedType} />
         <Filter data={LIGHTS} type='Lights' onChange={setSelectedLights} />
         <Filter data={COURTS} type='Courts' onChange={setSelectedCourts} />
       </div>
-      <div className='courts-list-table-div'>
+      <div className='courts-list-table-div' ref={listStartRef}>
         <table className='courts-list-table'>
           <thead>
             <tr>
@@ -70,7 +77,12 @@ function CourtsList() {
             {currentCourts.map(courtData => <Court {...courtData} key={courtData.location}/>)}
           </tbody>
         </table>
-        <Pagenation courtsPerPage={courtsPerPage} totalCourts={filteredData.length} setCurrentPage={setCurrentPage} currentPage={currentPage} />
+        <Pagenation
+          courtsPerPage={courtsPerPage}
+          totalCourts={filteredData.length}
+          setCurrentPage={handlePageChange}
+          currentPage={currentPage}
+        />
       </div>
       <div className='reference-div'>
         <p>Reference: <a href='https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/tennis-court-listings/'>City of Toronto - Tennis Court Listings</a></p>

@@ -108,6 +108,8 @@ nav li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  margin: 20px;
 }
 
 .courts-list-table-div {
@@ -219,11 +221,11 @@ nav li {
   margin: 0 auto;
 }
 
-.area-filter {
+.filter {
   height: 35px;
   margin: 0 20px;
   width: 20%;
-  padding-left: 3%;
+  padding-left: 2%;
   border-radius: 5px;
   border-color: aliceblue;
 }
@@ -398,7 +400,7 @@ nav li {
     row-gap: 5px;
   }
   
-  .area-filter {
+  .filter {
     width: 90%;
     margin: 0;
   }

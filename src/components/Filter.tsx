@@ -17,7 +17,7 @@ function Filter({ data, type, onChange }: FilterProps) {
   };
 
   return (
-    <select className='area-filter' onChange={handleSelect}>
+    <select className='filter' id={'filter-' + type} onChange={handleSelect}>
       <option value='all'>{type}</option>
       {Object.entries(data).map(([key, value]) => (
         <option value={key} key={key}>

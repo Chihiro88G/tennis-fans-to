@@ -6,7 +6,7 @@ function TopNavigation() {
     <nav>
       <ul className="navigation">
         <li><a href="index.html" className='white-color'>Home</a></li>
-        <li><a href="#about" className='white-color'>Courts</a></li>
+        <li><a href="#courts-list" className='white-color'>Courts</a></li>
         <li><a href="#contact" className='white-color'>Contact</a></li>
       </ul>
       <div className="hamburger-menu">

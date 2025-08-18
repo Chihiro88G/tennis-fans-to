@@ -55,7 +55,7 @@ function CourtsList() {
   }
 
   return (
-    <div className='courts-list-section'>
+    <div className='courts-list-section' id='courts-list'>
       <h2>Tennis Court Listings in Toronto Area</h2>
       <div className='filters' ref={listStartRef}>
         <Filter data={AREAS} type='Area' onChange={setSelectedArea} />

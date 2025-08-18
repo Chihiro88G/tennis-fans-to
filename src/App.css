@@ -6,6 +6,10 @@ body {
   color: #454545;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .hamburger-menu {
   display: none;
   cursor: pointer;

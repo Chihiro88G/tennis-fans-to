@@ -252,7 +252,7 @@ nav li {
 .search-btn-div {
   position: absolute;
   left: 9%;
-  top: 50%;
+  top: 53%;
 }
 
 .search-btn-div button {
@@ -406,13 +406,14 @@ nav li {
   }
 
   .meetup-section h2 {
-    top: 20%;
+    top: 15%;
+  }
+
+  .search-btn-div {
+    top: 60%;
   }
 
   .search-btn-div button {
-    left: 9%;
-    top: 58%;
-  
     width: 130px;
     height: 35px;
   }

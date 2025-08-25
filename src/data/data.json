@@ -1239,5 +1239,73 @@
     "type": 0,
     "lights": true,
     "courts": 3
+  },
+  {
+    "location": "McGregor Park",
+    "area": 2,
+    "public_hrs": null,
+    "winter_play": true,
+    "type": 0,
+    "lights": false,
+    "courts": 3
+  },
+  {
+    "location": "Mcnicoll Park",
+    "area": 3,
+    "public_hrs": null,
+    "winter_play": false,
+    "type": 0,
+    "lights": true,
+    "courts": 3
+  },
+  {
+    "location": "Mill Valley Park",
+    "area": 5,
+    "public_hrs": null,
+    "winter_play": false,
+    "type": 0,
+    "lights": false,
+    "courts": 2
+  },
+  {
+    "location": "Millwood Park",
+    "area": 5,
+    "public_hrs": null,
+    "winter_play": false,
+    "type": 0,
+    "lights": true,
+    "courts": 3
+  },
+  {
+    "location": "Mimico Memorial Park",
+    "area": 5,
+    "public_hrs": null,
+    "winter_play": false,
+    "type": 1,
+    "lights": true,
+    "courts": 3
+  },
+  {
+    "location": "Moorevale Park Tennis Club",
+    "area": 3,
+    "public_hrs": [{
+      "day": 0,
+      "hrs_from": 20,
+      "hrs_to": 23
+    },
+    {
+      "day": 6,
+      "hrs_from": 20,
+      "hrs_to": 23
+    },
+    {
+      "day": 7,
+      "hrs_from": 21,
+      "hrs_to": 23
+    }],
+    "winter_play": false,
+    "type": 1,
+    "lights": true,
+    "courts": 5
   }
 ]
